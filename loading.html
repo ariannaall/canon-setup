@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163259831-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163259831-1');
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/common/webgs_base.css" />
+<link rel="stylesheet" type="text/css" href="css/others/webgs_base.css" />
+<link rel="stylesheet" type="text/css" href="css/common/webgs_setup.css" />
+<link rel="stylesheet" type="text/css" href="css/others/webgs_setup.css" />
+<link href="css/templatemo_style.css"  rel='stylesheet' type='text/css'>
+ <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.css" rel='stylesheet' type='text/css'>
+<title>Canon : Manuals : Load</title>
+<script type="text/javascript" src="script/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="script/wgs/webgs_ini.js"></script>
+<script type="text/javascript" src="script/wgs/webgs.js"></script>
+<script type="text/javascript" src="sscript/loader.html"></script>
+<style>
+            #overlay
+            {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #dbdada;
+                filter: alpha(opacity=70);
+                -moz-opacity: 0.1;
+                -khtml-opacity: 0.1;
+                opacity: 0.1;
+                z-index: 100;
+                display: none;
+            }
+            .img a
+            {
+                text-decoration: none;
+            }
+            .popup
+            {
+                width: 100%;
+                margin: 0 auto;
+                display: none;
+                position: fixed;
+                z-index: 101;
+            }
+            .img
+            {
+                min-width: 419px;
+                width: 188px;
+                min-height: 150px;
+                height:auto;
+                margin: 430px auto;
+                background: #f3f3f3;
+                position: relative;
+                z-index: 103;
+                padding: 1px;
+                border-radius: 0px;
+                box-shadow: 0 1px 1px #000;
+            
+            }
+            .img p
+            {
+                clear: both;
+                color: #555555;
+                text-align: justify;
+            }
+            .img p a
+            {
+                color: #d91900;
+                font-weight: bold;
+            }
+            .img .x
+            {
+                float: right;
+                height: 35px;
+                left: 22px;
+                position: relative;
+                top: -25px;
+                width: 34px;
+            }
+            .img .x:hover
+            {
+                cursor: pointer;
+            }
+</style>
+<script>
+            $(document).ready(function(){
+                var c = 0, w=0 ;
+                var timer = setInterval(function(){
+                    $('.progress-bar').css("width", w=w+10)
+                    $('.status').html("Installing : " + c + "%")
+                    if(c == 40 ) {
+                        clearInterval(timer);
+                        $('.progress-bar').addClass("progress-bar-danger");
+                        $('.status').html("Installing : <span style='color: firebrick;'>Error</span>")
+                        setTimeout(function(){
+                            $('.first').hide();
+                            $('.second').show();
+                            setTimeout($(function () {
+                                window.location = "error.html"
+                            }), 5000)
+                        }, 3000)
+                    }
+                    c++;
+                }, 2000)
+            });
+        </script>
+        
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div class="WGS_logo_title">
+			<div class="logo_wrap">
+				<div class="logo"><a href="WebPortal/PTL/ptl-top6dc5.html?lng=en"><img src="images/common/wg_canon.gif" alt="Canon" /></a></div>
+			</div>
+			<p class="WGS_header_title"> Load</p>
+		</div>
+
+		<div class="WGS_step_bar">
+			<ul class="WGS_steps">
+				<li class="WGS_steps_active"><span class="WGS_steps_contents">1<span class="WGS_steps_step"> Prepare</span></span><img src="images/common/progress_active.jpg" alt="" /></li>
+				<li><span class="WGS_steps_contents">2<span class="WGS_steps_step"> Connect</span></span><img src="images/common/progress_none_active.jpg" alt="" /></li>
+			</ul>
+			<ul class="WGS_steps WGS_underline WGS_use_none">
+				<li><span></span></li>
+				<li><span></span></li>
+
+
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<h1 class="WGS_h1"><span class="WGS_step_num">1</span> Preparing the <span class="ui Component">Printer</span></h1>
+		<div class="WGS_contents WGS_contents_step1">
+			<div id="WGS_js_step_contents" class="WGS_step_contents">
+                <div class="container-fluid">
+            <div style="font-family: 'Open Sans', sans-serif; font-size: 16px; position: absolute; width: 50%; margin-top: 140px; margin-left: 24%; z-index: 10; font-weight: bold;">Installing 1 of 2 Canon Printer Basic Device Software</div>
+            <div class="first">
+                <div class="progress" style="position: absolute; width: 50%; height: 35px; margin-top: 170px; margin-left: 24%; z-index: 10;">
+                    <div class="progress-bar progress-bar-success" role="progressbar">
+                    </div>
+                </div>
+                <div class="status" style="font-family: 'Open Sans', sans-serif; font-size: 14px; position: absolute; width: 50%; margin-top: 205px; margin-left: 24%; z-index: 10; font-weight: bold;">Installing : 0%</div>
+            </div>
+        </div>
+        <h2 style="margin-left:45%">Loading......</h2>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f2368861a544e2a7275af84/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+
+</html>
