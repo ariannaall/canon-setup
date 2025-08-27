@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+body {
+	font-family: Arial, sans-serif;
+	text-align: left;
+}
+/* Navi Skip */
+p.skip_nav a {
+	left: -10000px;
+}
+p.skip_nav a:focus, p.skipnav a:active {
+	left: 0;
+}
+/*------------ ヘッダー ------------*/
+/* 戻るリンク */
+#header ul.back_link {
+	float: left;
+	margin-left: 3%;
+	list-style-image: url(../../images/others/back_arrow.gif);
+}
+#header ul.back_link li { margin-left: 20px; }
+
+/* アプリに戻るリンク */
+#header ul.appback {
+	margin-left: 3%;
+	list-style-image: url(../../images/others/back_arrow.gif);
+}
+#header ul.appback li { margin-left: 20px; }
+
+/* ナビリスト */
+#header ul.nav_list {
+	margin-left: 3%;
+	list-style-image: url(../../images/others/arrow.html);
+}
+#header ul.nav_list li { margin-left: 20px; }
+
+/* ナビリスト グレー矢印 */
+#header ul.nav_list_gray {
+	margin-left: 3%;
+	list-style-image: url(../../images/others/arrow_gray.html);
+}
+#header ul.nav_list_gray li { margin-left: 20px; }
+
+/* ページタイトル */
+#header h1 {
+	padding: 0.3em 1em 0.3em 2em;
+}
+#header h1:before {
+	left: -4px;
+	content: url(../../images/others/ptl-ribbon.png);
+}
+#header h1 span.title_sub {
+	padding: 3px 1em 5px 0;
+}
+
+/* 言語選択ボックス */
+#header form.lang_select {
+	text-align: right;
+}
+
+/* OS選択ボックス 18a-01 */
+#header form.os_select {
+	text-align: right;
+}
+
+/*------------ フッター ------------*/
+/* ページの先頭へ */
+#footer p.gototop {
+	float: right;
+	margin-right: 3%;
+}
+
+@media screen and (min-width: 480px) {
+	/*------------ ヘッダー ------------*/
+	/* ナビリスト */
+	#header ul.nav_list {
+		float: right;
+		margin-right: 3%;
+	}
+
+	/* ナビリスト グレー矢印 */
+	#header ul.nav_list_gray {
+		float: right;
+		margin-right: 3%;
+	}
+	#header ul.nav_list_gray li {
+		float: left;
+		margin-left: 30px;
+	}
+}
+
+@media print {
+	/*------------ ヘッダー ------------*/
+	/* 戻るリンク */
+	#header ul.back_link {
+		float: left;
+	}
+
+	/* ナビリスト */
+	#header ul.nav_list {
+		float: right;
+		margin-right: 3%;
+	}
+
+	/* ナビリスト グレー矢印 */
+	#header ul.nav_list_gray {
+		float: right;
+		margin-right: 3%;
+	}
+}

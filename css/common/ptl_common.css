@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/* セクションブロック */
+#contents div.section {
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+
+/* リードブロック */
+#contents div.lead { margin-bottom: 1em; }
+
+/* 見出し */
+#contents h1:not(.h1_normal) {	/* 18a-01 */
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0.8em;
+	padding: 8px 15px 3px 15px;
+	border-left: 7px solid #cc0000;
+	border-bottom: 1px solid #cc3333;
+}
+#contents h1.h1_normal	{	/* 18a-01 */
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0.8em;
+}
+#contents h2:not(.h2_normal)	{	/* 18a-01 */
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+	padding: 5px 12px 3px 12px;
+	border-left: 7px solid #cc0000;
+}
+#contents h2.h2_normal	{	/* 18a-01 */
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+}
+#contents h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+}
+
+/* 各要素下マージン */
+#contents p, #contents ul, #contents ol, #contents dl, #contents table, #contents div.figure { margin-bottom: 0.5em; }
+
+/* 見出し（非構造用） */
+#contents p.headword {
+	font-weight: bold;
+	margin-top: 1em;
+}
+#contents p.headword2 {	/* 19a-02 */
+	font-weight: bold;
+	margin-top: 1.1em;
+	margin-bottom: 1.0em;
+}
+#contents span.font_up11 {	/* 19a-02 */
+	font-size: 1.1em;
+}
+#contents span.font_up12 {	/* 19a-02 */
+	font-size: 1.2em;
+}
+#contents span.font_up13 {	/* 19a-02 */
+	font-size: 1.3em;
+}
+
+/* 順序なしリスト（汎用・ビュレットあり） */
+#contents ul {
+	list-style-type: disc;
+/*	padding-left: 1.8em; */
+}
+#contents ul ul { list-style-type: circle; }
+#contents ul ul ul { list-style-type: square; }
+
+/* リンクリスト */
+#contents ul.link_list { /* list-style-image: url(../../images/others/i_arrow_trans.gif); */}
+
+/* 重要マーク */
+#contents p.important {
+	margin-bottom: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/* 重要リスト */
+#contents ul.important_list {
+	list-style-type: disc;
+	margin-bottom: 0.8em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	/* padding-right: 0.25em; */
+/*	border-top: 1px solid #cc3333;		18a-01 */
+/* 	border-bottom: 1px solid #cc3333;	18a-01 */
+	background-color: #ffeeee;
+}
+#contents ul.important_list ul { list-style-type: disc; }
+#contents ul.important_list ul { list-style-image: url(common/hyphen.html); }	/* 19a-02 */
+#contents ul.important_list ul.link_list { list-style-image: url(common/i_arrow_trans.html) !important;}	/* 19a-02 */
+
+/* 参考マーク */
+#contents p.note {
+	margin-bottom: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/* 参考リスト */
+#contents ul.note_list {
+	list-style-type: disc;
+	margin-bottom: 0.8em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	/* padding-right: 0.25em; */
+/*	border-top: 1px solid #0e1b3f;		18a-01 */
+/*	border-bottom: 1px solid #0e1b3f;	18a-01 */
+	background-color: #f4f5fa;
+}
+#contents ul.note_list ul { list-style-type: disc; }
+#contents ul.note_list ul { list-style-image: url(common/hyphen.html); }	/* 19a-02 */
+#contents ul.note_list ul.link_list { list-style-image: url(common/i_arrow_trans.html) !important;}	/* 19a-02 */
+
+/* 補足リスト */
+#contents ul.sup_list {
+	list-style-type: square;
+	margin-bottom: 0.8em;
+	/* padding: 0.2em 0 0.2em 1.5em; */
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #afafaf;
+}
+
+/* 手順リスト */
+#contents ol.step_list {
+	list-style-type: decimal;
+	/* margin-left: 2.5em; */
+}
+#contents ol.step_list > li {
+	font-size: 1.4em;
+	margin-top: 1em;
+	font-weight: bold;	/* 18a-01 */
+}
+#contents ol.step_list > li > ol.step_list > li {
+	font-size: 0.9em;
+	font-weight: bold;		/* 18a-02 */
+}
+#contents ol.step_list > li > ol.step_list > li > ol.step_list > li {
+	font-weight: normal;		/* 18a-01 */
+}
+#contents ol.step_list > li > p {
+	font-size: 0.8em;
+	font-weight: bold;		/* 18a-01 JP=BOLD */
+}
+#contents ol.step_list > li > p.headword {
+	font-size: 0.7em;
+	font-weight: bold;		/* 18a-02 */
+}
+#contents ol.step_list > li > p.step_sup {
+	font-size: 0.7em;
+	font-weight: normal;		/* 18a-01 */
+}
+#contents ol.step_list > li > ol.step_list > li p  {
+	font-weight: normal;		/* 18a-01 */
+}
+#contents ol.step_list > li > p.warning { font-size: 0.84em; }
+#contents ol.step_list > li > p.caution { font-size: 0.84em; }
+#contents ol.step_list > li > p.important { font-size: 0.84em; }
+#contents ol.step_list > li > p.note { font-size: 0.84em; }
+#contents ol.step_list > li p.warning,
+#contents ol.step_list > li p.caution,
+#contents ol.step_list > li p.important,
+#contents ol.step_list > li p.note {
+	font-weight: bold !important;		/* 18a-03 */
+}
+#contents ol.step_list > li > ol > li {
+	font-size: 0.7em;
+	font-weight: bold;		/* 18a-01 */
+}
+#contents ol.step_list > li > ol > li p,
+#contents ol.step_list > li > ol > li ul {
+	font-weight: normal;		/* 18a-02 */
+}
+#contents ol.step_list > li > ul > li {
+	font-size: 0.7em;
+	font-weight: normal;		/* 18a-01 */
+}
+#contents ol.step_list > li > dl { font-size: 0.7em; }
+#contents ol.step_list > li > table { font-size: 0.65em; }
+#contents ol.step_list > li dl dd {
+	font-weight: normal;		/* 18a-02 */
+}
+
+#contents span.step_b { font-weight: bold; }	/* 19a-02 */
+
+/* チェックリスト */
+#contents ol.check_list {
+	list-style: none;
+/*	margin-left: 0; */
+}
+#contents ol.check_list > li {
+	font-size: 1.2em;
+	margin-top: 1em;
+}
+
+/* チェック番号 */
+#contents span.check_num {
+	font-size: 0.8em;
+	color: #ffffff;
+	background-color: #445577;
+	padding: 0.2em 1em;
+	vertical-align: middle;
+}
+
+/* 図表 */
+#contents div.figure img { max-width: 100%; }
+
+/* 図表2（幅により表示切り替え） */
+#contents div.figure2 { display: none; }
+
+/* 強調 */
+#contents strong {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* リンクボタン */
+#contents ul.link_button {
+	list-style: none;
+	/* padding-left: 0; */
+	text-align: center;
+}
+#contents ul.link_button li { display: inline-block; }
+#contents ul.link_button li a {
+	display: block;
+	padding: 0.5em 2em;
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #000000;
+	background-color: #686868; /* IE8, IE9 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#878787), color-stop(50%, #878787), color-stop(50%, #686868), to(#686868)); /* Android2.3, Safari5.1 */
+	background-image: linear-gradient(to bottom, #878787 50%, #686868 50%);
+	border: 1px solid #999999;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 1px 1px #d3d3d3, 1px 1px 1px rgba(255, 255, 255, 0.6) inset, -1px -1px 1px rgba(255, 255, 255, 0.6) inset; /* Android2.3 */
+	box-shadow: 1px 1px #d3d3d3, 1px 1px rgba(255, 255, 255, 0.6) inset, -1px -1px rgba(255, 255, 255, 0.6) inset;
+}
+#contents ul.link_button li a:hover  { color: #cc0000; }
+
+/* 折りたたみ */
+#contents div.fold_section {
+	background-color: #ffffff;
+	border: 1px solid #afafaf;
+	-webkit-box-shadow: 1px 1px 3px #000000; /* Android2.3 */
+	box-shadow: 1px 1px 3px #000000;
+	margin-bottom: 0.5em;
+}
+#contents .fold_open,
+#contents .fold_close,
+#contents .fold_button_open,
+#contents .fold_button_close {
+	background-color: #f9f9f9;
+	padding: 0.5em;
+	margin: 0 !important;
+}
+#contents .fold_button_open a,
+#contents .fold_button_close a {
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	outline: none;
+}
+#contents .fold_button_open a:before {
+	content: url(../../images/common/minus.html);
+	/* padding-right: 0.5em; */
+	vertical-align: -3px;
+}
+#contents .fold_button_close a:before {
+	content: url(../../images/common/plus.html);
+	/* padding-right: 0.5em; */
+	vertical-align: -3px;
+}
+#contents div.fold_area { padding: 1em; }
+
+/* アノテーション */
+#contents ul.annotation {
+	list-style-type: none;
+	/* padding-left: 1em; */
+	text-indent: -1em;
+}
+#contents ul.annotation li:before {
+	display: inline;
+	/* padding-right: 0.5em; */
+	content: "*";
+}
+
+@media screen and (min-width: 480px) {
+	/* セクションブロック */
+	/* #contents div.section { margin-left: 1em; } */
+
+	/* 図表2（幅により表示切り替え） */
+	#contents div.figure2 { display: block; }
+
+	/* リンクボタン */
+	/* #contents ul.link_button { text-align: right; } */
+
+	/* 図表回り込み */
+	#contents div.figure_wrap div.figure {
+		/* float: left; */
+		/* margin-right: 10px; */
+	}
+	#contents div.figure_wrap:after {
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+		content: "";
+	}
+}
+
+@media print {
+	/* セクションブロック */
+	/* #contents div.section { margin-left: 1em; } */
+
+	/* チェック番号 */
+	#contents ol.check_list span.check_num { border: 1px solid #445577; }
+
+	/* 図表2（幅により表示切り替え） */
+	#contents div.figure2 { display: block; }
+
+	/* リンクボタン */
+	/* #contents ul.link_button { text-align: right; } */
+
+	/* 図表回り込み */
+	#contents div.figure_wrap div.figure {
+		/* float: left; */
+		/* margin-right: 10px; */
+	}
+	#contents div.figure_wrap:after {
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+		content: "";
+	}
+}

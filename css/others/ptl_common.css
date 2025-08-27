@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 順序なしリスト（汎用・ビュレットあり） */
+#contents ul {
+	padding-left: 1.8em;
+}
+
+/* リンクリスト */
+#contents ul.link_list { list-style-image: url(../../images/others/i_arrow_trans.html); }
+
+/* 重要リスト */
+#contents ul.important_list {
+	padding-right: 0.25em;
+}
+
+/* 参考リスト */
+#contents ul.note_list {
+	padding-right: 0.25em;
+}
+
+/* 補足リスト */
+#contents ul.sup_list {
+	padding: 0.2em 0 0.2em 1.5em;
+}
+
+/* 手順リスト */
+#contents ol.step_list {
+	margin-left: 2.5em;
+}
+#contents ol.step_list > li > p {
+	font-weight: normal;		/* 18a-01 not JP=normal */
+}
+
+/* チェックリスト */
+#contents ol.check_list {
+	margin-left: 0;
+}
+
+/* リンクボタン */
+#contents ul.link_button {
+	padding-left: 0;
+}
+
+/* 折りたたみ */
+#contents .fold_button_open a:before {
+	padding-right: 0.5em;
+}
+#contents .fold_button_close a:before {
+	padding-right: 0.5em;
+}
+
+/* アノテーション */
+#contents ul.annotation {
+	padding-left: 1em;
+}
+#contents ul.annotation li:before {
+	padding-right: 0.5em;
+}
+
+/* UI Term */
+#contents span.ui { font-weight: bold; }
+#contents span.FaxReport { font-weight: inherit; }
+#contents span.Manual { font-weight: inherit; }
+#contents h1 span.Manual { font-style: normal; }
+#contents span.Media_ProductName { font-weight: inherit; }
+#contents span.Prohibit { font-weight: inherit; }
+
+/* UI Term (OS) */
+#contents span.os_ui { font-weight: bold; }
+
+/* UI Term (other) */
+#contents span.other_ui { font-weight: inherit; }
+
+/* 折りたたみ */
+#contents div.js_fold_area_jsoff {
+	display: block;
+	padding: 1em;
+}
+#contents div.js_fold_open_area {
+	display: block;
+	padding: 1em;
+}
+#contents div.js_fold_close_area {
+	display: none;
+	padding: 1em;
+}
+
+@media screen and (min-width: 480px) {
+	/* セクションブロック */
+	#contents div.section { margin-left: 1em; }
+
+	/* リンクボタン */
+	#contents ul.link_button { text-align: right; }
+
+	/* 図表回り込み */
+	#contents div.figure_wrap div.figure {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+@media print {
+	/* セクションブロック */
+	#contents div.section { margin-left: 1em; }
+
+	/* リンクボタン */
+	#contents ul.link_button { text-align: right; }
+
+	/* 図表回り込み */
+	#contents div.figure_wrap div.figure {
+		float: left;
+		margin-right: 10px;
+	}
+}

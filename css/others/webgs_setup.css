@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/*=== loading style ===*/
+#WGS_ij_loader {
+	left: 50%;
+	margin-left: -200px;
+}
+
+/*===Header===*/
+#header {
+	padding: 0.3em 0.4em 0.3em 0;
+}
+#header div.WGS_logo_title {
+	float: left;
+}
+
+/*---Step Bar---*/
+#header div.WGS_step_bar {
+	float: right;
+	margin-right: -0.2em;
+}
+#header ul.WGS_underline li:first-child span {
+	margin-left: 50%;
+}
+/*If 3 is not displayed*/
+#header ul.WGS_use_none li:nth-child(2) span {
+	margin-right: 50%;
+}
+
+/*===Contents===*/
+/*---Step title---*/
+#contents h1.WGS_h1 {
+	margin-left: 10%;
+}
+
+/*---WGS contents---*/
+#contents div.WGS_contents ul.WGS_step1 {
+	left: 0;
+}
+#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+	float: left;
+}
+
+/*---Slide anime---*/
+#contents div.WGS_contents ul.WGS_slideshow li {
+	left: 0;
+}
+
+/*---------CSS for JS---------*/
+/*---Slide anime---*/
+/*start pause button*/
+#contents ul.WGS_slideshow::after {
+	left: 50%;
+	margin-left: -25px;
+}
+/*---------CSS for JS End---------*/
+/*---Detail---*/
+#contents li.WGS_setup_step div.WGS_detail ol.WGS_step_list {
+	margin-left: 1.5em;
+}
+
+/*---DL button---*/
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_cn {
+	padding-left: 0.75em;
+}
+
+/*---Other device link---*/
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list a.WGS_connect_link_icon:before {
+	padding-right: 0.3em;
+}
+
+/*---Next/Back button---*/
+#contents div.WGS_contents div.WGS_next_button {
+	right: 0;
+}
+#contents div.WGS_contents div.WGS_back_button {
+	left: 0;
+}
+/*---Page button---*/
+#contents li.WGS_page_prev_button {
+	float: left;
+}
+#contents li.WGS_page_next_button {
+	float: right;
+	text-align: right;
+	margin-left: 10px;
+}
+#contents li.WGS_page_prev_button img {
+	margin-right: 0.5em;
+}
+#contents li.WGS_page_next_button img {
+	margin-left: 0.5em;
+}
+
+/*---Close button---*/
+#contents ul.WGS_close_button li a span.WGS_button_img {
+	padding-right: 0.8em;
+}
+
+/*---Select os---*/
+#contents ul.WGS_select_os {
+	padding-left: 0.9em;
+}
+
+/*---Modal Window---*/
+/*common*/
+#contents div.WGS_close_button {
+	text-align: right;
+}
+#WGS_modal_bg {
+	left: 0;
+}
+#contents #WGS_modal_tips ol li span.WGS_strong {
+	font-style: italic;
+}
+
+/*---Err page---*/
+#contents div.WGS_err_contents h2 {
+	padding-left: 5px;
+	border-left: solid 5px #cc0000;
+}
+#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list {
+	padding-left: 2em;
+}
+
+/**********************************************************************************/
+@media screen and (min-width: 480px) {
+	#header {
+		padding: 0.3em 0.5em 0.3em 0.5em;
+	}	
+	/*---------CSS for JS---------*/
+	/*Slide anime*/
+	#contents ul.WGS_slideshow::after {
+		margin-left: -35px;
+	}
+	/*---------CSS for JS End---------*/
+
+	/*---Select os---*/
+	#contents ul.WGS_select_os {
+		padding-left: 1.3em;
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 700px) {
+	
+	/*---Step Bar---*/
+	#header div.WGS_step_bar {
+		margin-right: -0.3em;
+	}
+	#header div.WGS_lang_others {
+		margin-right: -0.3em;
+	}
+	
+	/*If 3 is not displayed*/
+	#header ul.WGS_use_none li:nth-child(2) span {
+		margin-right: 0;
+	}
+	#header ul.WGS_use_none li:last-child span {
+		margin-right: 50%;
+	}
+	
+	/*For Loc*/
+	#header div.WGS_lang_others ul.WGS_underline.WGS_use_none li:nth-child(2) span {
+	    margin-right: 50%;
+	}
+	
+	/*===Contents===*/
+	#contents h1.WGS_h1 {
+		margin-left: 50px;
+	}
+	#contents div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		width: 50%;
+	}
+	
+	/*---Slide anime---*/
+	#contents div.WGS_progress_button {
+		margin-left: 1%;
+	}
+	#contents div.WGS_count_area {
+		margin-right: 1%;
+	}
+	
+	/*---Detail---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		left: 55%;
+		padding-left: 3%;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 div.WGS_detail {
+		left: 58%;
+		padding-left: 3%;
+	}
+	
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_link_area {
+		margin-right: 50px;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list {
+		margin-right: 25px;
+	}
+	/*---Err page---*/
+	#contents div.WGS_err_contents div.WGS_sub_err_contents p,
+	#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list {
+		margin-left: 1em;
+	}
+	#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list p {
+		margin-left: 0;
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 1024px) {
+
+	#header div.WGS_step_bar {
+		margin-right: -0.5em;
+	}
+	#header div.WGS_lang_others {
+		margin-right: -0.3em;
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		left: 0;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		left: 62%;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 div.WGS_detail {
+		left: 50%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_button {
+		margin: 0 5px 0 8px;
+	}
+	#contents div.WGS_progress_wrap div.WGS_count_area {
+		margin: 0 8px 0 5px;
+	}
+}
+/**********************************************************************************/
+@media print {
+/*===contents===*/	
+/************480px************/	
+	/*---------CSS for JS---------*/
+	/*Slide anime*/
+	#contents ul.WGS_slideshow::after {
+		margin-left: -35px;
+	}		
+	/*---------CSS for JS End---------*/
+
+	/*---Select os---*/
+	#contents .WGS_select_os {
+		padding-left: 1.3em;
+	}
+
+/************600px************/
+	/*--- Illust --*//*For print*/
+	#contents div.WGS_illust_smart:after {
+		left: 30%;
+	}
+	#contents div.WGS_illust_pc:after {
+		left: 30%;
+	}
+	/*---Modal Window---*/
+	/*For print*/
+	#contents div.WGS_modal_main {
+		left: 0;
+	}
+}

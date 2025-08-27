@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* contents */
+#contents p.WGS_start_button span img {
+	padding-left: 0.8em;
+}
+
+@media screen and (min-width: 480px) {
+	#contents h1.WGS_h1 span.WGS_title_os {
+		margin-left: 0.5em;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#contents h1.WGS_h1 {
+		margin-left: 5%;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		margin-left: 0.5em;
+	}
+	#contents p.WGS_start_button {
+		padding-left: 1.5em;
+	}
+	#contents p.WGS_link {
+		margin-left: 5%;
+	}
+}
+/**********************************************************************************/
+@media print {
+	#contents h1.WGS_h1 span.WGS_title_os {
+		margin-left: 0.5em;
+	}
+	#contents h1.WGS_h1 {
+		margin-left: 5%;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		margin-left: 0.5em;
+	}
+	#contents p.WGS_start_button {
+		padding-left: 1em; /* For print */
+	}
+	#contents p.WGS_link {
+		margin-left: 5%;
+	}
+}

@@ -1,0 +1,1531 @@
+@charset "utf-8";
+
+body #container {
+ 	overflow-x: hidden;
+}
+/*=== loading style ===*/
+ul.WGS_step1 {
+	display: none;
+}
+ul.WGS_pagination {
+	display: none;
+}
+ul.WGS_page_button_step1 {
+	display: none;
+}
+#WGS_js_step_contents_next_button {
+	display: none;
+}
+#WGS_js_step_contents_back_button {
+	display: none;
+}
+#WGS_ij_loader_bg {
+	display: block;
+ 	width: 100%;
+ 	height: 100%;
+}
+#WGS_ij_loader {
+	display: block;
+	position: absolute;
+	top: 50%;
+	/* left: 50%; */
+	width: 400px;
+	height: 30px;
+	margin-top: -15px;
+	/* margin-left: -200px; */
+	text-align: center;
+}
+#WGS_ij_loader p {
+	font-size: 1.2em;
+}
+
+/*===Header===*/
+#header {
+	/* padding: 0.3em 0.4em 0.3em 0; */
+}
+#header div.WGS_logo_title {
+	/* float: left; */
+}
+#header div.logo_wrap div.logo img {
+	width: 84px;
+}
+#header p.WGS_header_title {
+	display: none;
+}
+
+/*---Step Bar---*/
+#header div.WGS_step_bar {
+	/* float: right; */
+	/* margin-right: -0.2em; */
+}
+#header ul.WGS_steps {
+	display: table;
+	width: 100%;
+}
+#header ul.WGS_steps li {
+	display: table-cell;
+	width: 1.8em;
+	text-align: center;
+	font-size: 1.2em;
+	color: #696969;
+}
+#header ul.WGS_steps li.WGS_steps_active {
+	color: #151515;
+}
+#header ul.WGS_steps li.WGS_use {
+	display: none;
+}
+#header ul.WGS_steps li span.WGS_steps_contents {
+	display: block;
+}
+#header ul.WGS_underline li span {
+	display: block;
+	border-top: solid 1px #cccccc;
+}
+#header ul.WGS_underline li:first-child span {
+	/* margin-left: 50%; */
+}
+/* If 3 is not displayed */
+#header ul.WGS_use_none li:nth-child(2) span {
+	/* margin-right: 50%; */
+}
+
+#header ul.WGS_steps span.WGS_steps_step {
+	display: none;
+}
+
+#header:after {
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	content: "";
+}
+
+/*===Contents===*/
+#contents {
+	width: 100%;
+	padding-top: 0;
+}
+#contents p {
+	margin-bottom: 0.5em;
+}
+/*---Step title---*/
+#contents h1.WGS_h1 {
+	/* margin-left: 10%; */
+	text-indent: -1.1em;
+	color: #000000;
+	font-size: 1.6em;
+	font-weight: normal;
+	line-height: 1.2;
+}
+#contents h1.WGS_h1 span.WGS_step_num {
+	font-size: 1.6em;
+}
+#contents h1.WGS_err_h1 {
+	margin: 0.7em 4% 0.2em 4%;
+	font-size: 1.6em;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+/*---WGS contents---*/
+#contents div.WGS_contents {
+	position: relative;
+	border-top: 1px solid #696969;
+	border-bottom: 1px solid #696969;
+}
+#contents div.WGS_contents div.WGS_step_contents {
+	width: 100%;
+}
+#contents div.WGS_contents_step1 {
+	height: 335px;	
+}
+#contents div.WGS_contents ul.WGS_step1 {
+	position: absolute;
+	/* left: 0; */
+	margin-top: 0.2em;
+	height: 305px;
+}
+#contents div.WGS_contents ul.WGS_step2 {
+	padding: 1em;
+}
+#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+	padding: 0.5em 30px 0.5em 30px;
+	/* float: left; */
+}
+#contents div.WGS_contents ul.WGS_step1:after {
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	content: "";
+}
+
+/*---Slide anime---*/
+#contents div.WGS_contents ul.WGS_setup div.WGS_figure {
+	width: 220px;
+	margin: 0 auto;
+	margin-bottom: 0.8em;
+}
+#contents div.WGS_contents ul.WGS_setup div.WGS_figure img {
+	width: 100%;
+}
+#contents ul.WGS_slideshow {
+	position: relative;
+}
+#contents ul.WGS_slideshow:before {
+	content: "";
+	display: block;
+	padding-top: 56%;
+}
+#contents div.WGS_contents ul.WGS_slideshow li {
+	position: absolute;
+	top: 0;
+	/* left: 0; */
+}
+
+/*---Progress bar---*/
+#contents div.WGS_progress_wrap {
+	background-color: #e2e2e2;
+}
+#contents div.WGS_progress_button {
+	display: inline-block;
+	width: 10%;
+	height: 30px;
+	background-image: url(../../images/common/wg_b_stop.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom:0.2em;
+	padding-top: 0.2em;
+	vertical-align: middle;
+}
+#contents div.WGS_progress_area {
+	display: inline-block;
+	width: 68%;
+	vertical-align: middle;
+}
+#contents div.WGS_count_area {
+	display: inline-block;
+	width: 18%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* ---------CSS for JS--------- */
+/*---Slide anime---*/
+/* start pause button */
+#contents div.WGS_progress_wrap div.WGS_pause {
+	background-image: url(../../images/common/wg_b_stop.png);
+}
+
+#contents div.WGS_progress_wrap div.WGS_start {
+	background-image: url(../../images/common/wg_b_start.html);
+}
+
+#contents div.WGS_progress_wrap div.WGS_restart {
+	background-image: url(../../images/common/wg_b_restart.png);
+}
+#contents ul.WGS_slideshow::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	/* left: 50%; */
+	margin-top: -25px;
+	/* margin-left: -25px; */
+	width: 50px;
+	height: 50px;
+	z-index: 200;
+}
+
+#contents ul.WGS_slideshow.WGS_pause::after {
+	background: none;
+}
+
+#contents ul.WGS_slideshow.WGS_start::after {
+	background: url(../../images/common/wg_start_s.html);
+}          
+
+#contents ul.WGS_slideshow.WGS_restart::after {
+	background: url(../../images/common/wg_restart_s.html);
+}
+/*---Progress bar---*/
+#contents div.WGS_progress_wrap div.WGS_progress_area div {
+	width: 100%;
+	height: 100%;
+}
+#contents div.WGS_progress_wrap div.WGS_progress_area div.WGS_progress_control {
+	width: 100%;
+	height: 10px;
+}
+#contents div.WGS_progress_wrap div.WGS_progress_area div.WGS_progress_back {
+	background-color: #ffffff;
+}
+#contents div.WGS_progress_wrap div.WGS_progress_area div.WGS_progress_main {
+	background-color: #929292;
+	width: 0;
+}
+/* ---------CSS for JS End--------- */
+
+/*---Illust---*/
+#contents div.WGS_illust div {
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+	width: 180px;
+	height: 73px;
+}
+#contents #WGS_sprite_connect_smart {
+	background-image: url("../../images/common/wg_connect_sp_s.html");
+}
+#contents #WGS_sprite_connect_pc {
+	background-image: url("../../images/common/wg_connect_pc_s.html");
+}
+/*---Detail---*/
+#contents div.WGS_detail {
+	margin: 0 auto;
+}
+#contents div.WGS_contents_step1 div.WGS_detail {
+	width: 220px;
+}
+#contents div.WGS_detail p.WGS_no_app {
+	margin-top: 1.5em;
+}
+#contents div.WGS_detail p.WGS_win10s {
+	margin-top: 1.5em;
+}
+#contents div.WGS_detail p.WGS_step img {
+	vertical-align: middle;
+}
+#contents li.WGS_setup_step div.WGS_detail ol.WGS_step_list {
+	list-style-type: decimal;
+	/* margin-left: 1.5em; */
+	margin-top: 1em;
+	font-size: 1.1em;
+}
+#contents li.WGS_setup_step div.WGS_detail ol.WGS_step_list li {
+	margin-bottom: 1em;
+}
+#contents li.WGS_setup_step div.WGS_detail ol.WGS_step_list li:last-child {
+	margin-bottom: 0;
+}
+#contents li.WGS_setup_step div.WGS_detail ol.WGS_step_list p.WGS_step_sup {
+	font-size: 0.9em;
+}
+#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+	font-size: 1em;
+}
+#contents li.WGS_setup_step div.WGS_detail p.WGS_step_note {
+	margin-top: 0.5em;
+	font-size: 0.7em;
+}
+#contents li.WGS_setup_step div.WGS_detail p.WGS_error a {
+	color: #0000cc;
+	text-decoration: underline;
+}
+#contents li.WGS_setup_step div.WGS_detail p.WGS_error a:hover,
+#contents div.WGS_contents_step2 div.WGS_detail p.WGS_step a:hover {
+	color: #ff6600;
+	cursor: pointer;
+}
+#contents div.WGS_contents_step2 div.WGS_detail p.WGS_step a {
+	color: #0000ff;
+	text-decoration: underline;
+}
+#contents div.WGS_contents_step2 div.WGS_detail p.WGS_i_step_img img {
+	max-width: 100%;
+}
+
+/*---DL button---*/
+/* pc */
+#contents div.WGS_contents div.WGS_step_contents div.WGS_detail p.WGS_step_mac {
+	font-size: 1em;
+	margin: 0.2em 0;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_mac_dl {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_dl {
+	display: inline-block;
+	padding: 0.5em 1em;
+	background-color: #f0f0f0;
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_dl li {
+	margin-bottom: 0.2em;
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_dl li.WGS_step_dl_list {
+	display: table;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button,
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_cn,
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_app {
+	display: table-cell;
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_cn {
+	/* padding-left: 0.75em; */
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_step_dl img {
+	max-width: 100%;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button a {
+	display: inline-block;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_pc a {
+	display: inline-block;
+	background-color: #cc0000;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0.4em 1em;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_pc a:hover {
+	background-color: #cc4444;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_pc img {
+	vertical-align: middle;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_dl_button_cn a {
+	display: inline-block;
+	background-color: #cc0000;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0.6em 1em;
+}
+#contents div.WGS_contents div.WGS_step_contents .WGS_dl_button_cn a:hover {
+	background-color: #cc4444;
+}
+
+/*---Other device link---*/
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list {
+	font-size: 0.95em;
+	margin-top: 2.5em;
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list a {
+	text-decoration: underline;
+	color: #0000ff;
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list a.WGS_connect_link_icon:before {
+	content: url("../../images/common/wg_hint_s.html");
+	position: relative;
+	top: 0.2em;
+	/* padding-right: 0.3em; */
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list a:hover {
+	cursor: pointer;
+	color: #ff6600;
+}
+
+/*---Movie button---*/
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 p.WGS_movie_button {
+	margin-top: 1.2em;	
+}
+#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 p.WGS_movie_button {
+	margin-top: 1.8em;	
+	margin-bottom: 0;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a {
+	display: inline-block;
+	border: 1px solid #333333;
+	color: #333333;
+	font-size: 0.95em;
+	text-decoration: none;
+	padding: 0.3em 0.8em;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a:hover {
+	background-color: #f0f0f0;
+}
+#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button img {
+	vertical-align: middle;
+}
+
+/*---Next/Back button---*/
+#contents div.WGS_contents div.WGS_next_button {
+	position: absolute;
+	/* right: 0; */
+	top: 50%;
+	margin-top: -22px;
+	z-index: 250;
+}
+#contents div.WGS_contents div.WGS_next_button:hover {
+	cursor: pointer;
+}
+#contents div.WGS_contents div.WGS_next_button img {
+	width: 30px;
+	height: 44px;
+}
+#contents div.WGS_contents div.WGS_back_button {
+	visibility: hidden;
+	position: absolute;
+	/* left: 0; */
+	top: 50%;
+	margin-top: -22px;
+	z-index: 250;
+}
+#contents div.WGS_contents div.WGS_back_button:hover {
+	cursor: pointer;
+}
+#contents div.WGS_contents div.WGS_back_button img {
+	width: 30px;
+	height: 44px;
+}
+#contents div.WGS_contents ul.WGS_pagination {
+	position: absolute;
+	bottom: 5px;
+	text-align: center;
+}
+#contents div.WGS_contents ul.WGS_pagination li {
+	display: inline-block;
+	border-radius: 100%;
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	opacity: 0.5;
+}
+#contents div.WGS_contents ul.WGS_pagination li:first-child {
+	background: #cc0000;
+}
+#contents div.WGS_contents ul.WGS_pagination li:not(:first-child) {
+	background: #cccccc;
+	margin-bottom: 2px;
+}
+#contents div.WGS_contents ul.WGS_pagination li:hover {
+	cursor: pointer;
+}
+/*---Page button---*/
+#contents ul.WGS_page_button {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	padding: 0 0.9em;
+	list-style-type: none;
+	font-size: 1.1em;
+}
+#contents li.WGS_connect {
+	display: none;
+}
+#contents ul.WGS_page_button:after {
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	content: "";	
+}
+#contents ul.WGS_page_button a {
+	display: table;
+}
+#contents ul.WGS_page_button span.WGS_button_title {
+	display: table-cell;
+	vertical-align: middle;
+}
+#contents ul.WGS_page_button li.WGS_page_prev_button span.WGS_button_title {
+	max-width: 8em;
+}
+#contents ul.WGS_page_button li.WGS_page_next_button span.WGS_button_title {
+	max-width: 11em;
+}
+#contents ul.WGS_page_button span.WGS_button_img {
+	display: table-cell;
+	vertical-align: middle;
+}
+#contents li.WGS_page_prev_button img {
+	/* margin-right: 0.5em; */
+}
+#contents li.WGS_page_next_button img {
+	/* margin-left: 0.5em; */
+}
+#contents li.WGS_page_prev_button a,
+#contents li.WGS_page_next_button a {
+	text-decoration: none;
+	padding: 0.8em 1em;
+	color: #ffffff;
+	background-color: #696969;
+}
+#contents li.WGS_page_prev_button a:hover,
+#contents li.WGS_page_next_button a:hover {
+	background-color: #949494;
+	text-decoration: none;
+}
+#contents li.WGS_page_prev_button {
+	/* float: left; */
+}
+#contents li.WGS_page_next_button {
+	/* text-align: right; */
+	/* float: right; */
+	/* margin-left: 10px; */
+}
+#contents li.WGS_skip a {
+	display: inline;
+	color:#0000cc;
+	text-decoration: underline;
+	background-color: #ffffff;
+	padding: 0;
+}
+#contents li.WGS_skip a:hover {
+	color: #ff6600;
+	background-color: #ffffff;
+	text-decoration: underline;
+}
+/*---Close button---*/
+#contents ul.WGS_close_button {
+	display: none;
+	margin: 1em 0;
+	text-align: center;
+}
+#contents ul.WGS_close_button li {
+	display: inline-block;
+}
+#contents ul.WGS_close_button li a {
+	display: table;
+	padding: 0.8em 1em;
+	text-decoration: none;
+	border: 1px solid #333333;
+	color: #333333;
+}
+#contents ul.WGS_close_button li a:hover {
+	background-color: #f0f0f0;
+}
+#contents ul.WGS_close_button li a span.WGS_button_title {
+	display: table-cell;
+}
+#contents ul.WGS_close_button li a span.WGS_button_img {
+	display: table-cell;
+	vertical-align: middle;
+	/* padding-right: 0.8em; */
+}
+
+/*---Select os---*/
+#contents ul.WGS_select_os {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	/* padding-left: 0.9em; */
+}
+#contents ul.WGS_select_os select {
+	padding: 0.3em;
+}
+
+/*---Modal Window---*/
+/* common */
+#contents div.WGS_modal_main {
+	display: none;
+	width: 80%;
+	max-height: 80%;
+	padding: 1em;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;
+	color: #666666;
+	position:fixed;
+	z-index: 999;
+	overflow: auto;
+}
+#contents div.WGS_close_button {
+	/* text-align: right; */
+	margin-bottom: 0.5em;
+}
+#contents div.WGS_close_button a {
+	display: inline-block;
+}
+#contents div.WGS_close_button a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+#contents #WGS_modal_error_prepare li:first-child {
+	margin-bottom: 1.0em;
+}
+#contents div.WGS_modal_main p img {
+	max-width: 100%;
+	margin: 0.5em;
+	vertical-align: middle;
+}
+#WGS_modal_bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #cccccc;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	/* left: 0; */
+	z-index: 300;
+}
+/* modal tips */
+#contents #WGS_modal_tips ul li img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+#contents #WGS_modal_tips ol {
+	list-style-type: decimal;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+}
+#contents #WGS_modal_tips ol>li {
+	margin-bottom: 1em;
+}
+#contents #WGS_modal_tips ol li span.WGS_connect_url {
+	display: inline-block;
+	margin-top: 0.5em;
+	padding: 0.2em 0.5em;
+	border: 1px solid #696969;
+}
+#contents #WGS_modal_tips ol li span.WGS_strong {
+	/* font-weight: bold; */
+	/* font-style: italic; */
+}
+/* modal details */
+#contents #WGS_modal_details ol {
+	list-style-type: decimal;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+}
+#contents #WGS_modal_details ol li {
+	margin-bottom: 0.5em;
+}
+
+/*---Err page---*/
+#contents div.WGS_err_contents {
+	border-top: 1px solid #696969;
+	border-bottom: 1px solid #696969;
+	padding: 1em 1.5em;
+}
+#contents div.WGS_err_contents h2 {
+	margin-bottom: 0.7em;
+	/* padding-left: 5px; */
+	/* border-left: solid 5px #cc0000; */
+}
+#contents div.WGS_err_contents h3 {
+	margin-bottom: 0.4em;
+	font-size: 1.3em;
+}
+#contents div.WGS_err_contents div.WGS_sub_err_contents {
+	margin-bottom: 1.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #cfcfcf;
+}
+#contents div.WGS_err_contents div.WGS_sub_err_contents:last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+#contents div.WGS_err_contents div.WGS_sub_err_contents p {
+	margin-bottom: 1em;
+}
+#contents div.WGS_err_contents p img {
+	margin-top: 0.5em;
+	max-width: 100%;
+}
+#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list {
+	list-style-type: decimal;
+	margin-bottom: 1em;
+	/* padding-left: 2em; */
+}
+
+/**********************************************************************************/
+@media screen and (min-width: 375px) {
+	/*===Header===*/
+	/*---Step Bar---*/
+	#header ul.WGS_steps li {
+		width: 2.5em;
+		font-size: 1.2em;
+	}
+
+	/*===contents===*/
+	/*---Step title---*/
+	#contents h1.WGS_h1,
+	#contents h1.WGS_err_h1 {
+		font-size: 1.8em;
+	}
+	#contents h1.WGS_h1 span.WGS_step_num {
+		font-size: 1.8em;
+	}
+	#contents div.WGS_contents_step1 {
+		height: 405px;
+	}
+	#contents div.WGS_step_contents {
+		height: 100%;	
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		height: 375px;
+		margin-top: 0.5em;
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		padding: 0.5em 30px 1em 30px;
+	}
+	#contents div.WGS_contents ul.WGS_step2 {
+		padding: 1em 2em 1em 2em;
+	}
+
+	/*---Slide anime---*/
+	#contents div.WGS_contents ul.WGS_setup div.WGS_figure {
+		max-width: 85%;
+		width: auto;
+	}
+	#contents div.WGS_progress_button {
+		width: 8%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 74%;
+	}
+	#contents div.WGS_count_area {
+		width: 14%;
+	}
+
+	/*---Detail---*/
+	#contents div.WGS_contents_step1 div.WGS_detail {
+		max-width: 85%;
+		width: auto;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+		font-size: 1.2em;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step_note {
+		font-size: 0.8em;
+	}
+	
+	/*---Other devices---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list {
+		font-size: 0.9em;
+	}
+
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button {
+		margin-top: 0.8em;
+	}
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a {
+		font-size: 1.1em;
+		padding: 0.3em 1em;
+	}
+	
+	/*---Page button---*/
+	#contents ul.WGS_page_button {
+		margin-top: 1em;
+	}
+	#contents ul.WGS_page_button li.WGS_page_next_button span.WGS_button_title {
+		max-width: 14em;
+	}
+
+}
+
+/**********************************************************************************/
+@media screen and (min-width: 480px) {
+
+	/*===Header===*/
+	#header {
+		/* padding: 0.3em 0.5em 0.3em 0.5em; *//* To give priority to 480px style, necessary to write this style in each language css */
+	}
+	#header ul.WGS_steps li {
+		font-size: 1.1em;
+	}
+	/*---Step title---*/
+	#contents h1.WGS_h1 span.WGS_step_num {
+		font-size: 2.5em;
+	}
+	#contents h1.WGS_err_h1 {
+		margin-top: 1.3em;
+		margin-bottom: 0.4em;
+	}
+	#contents div.WGS_contents_step1 {
+		height: 490px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		height: 450px;
+		margin-top: 1em;
+	}
+	#contents div.WGS_contents ul.WGS_step2 {
+		padding: 2em;
+	}
+	
+	/*---Slide anime---*/
+	#contents div.WGS_contents ul.WGS_setup div.WGS_figure {
+		max-width: 90%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 76%;
+	}
+	#contents div.WGS_count_area {
+		width: 13%;
+	}
+	
+	/* ---------CSS for JS--------- */
+	/* Slide anime */
+	#contents ul.WGS_slideshow::after {
+		width: 70px;
+		height: 70px;
+		margin-top: -35px;
+		/* margin-left: -35px; */
+	}
+	#contents ul.WGS_slideshow.WGS_start::after {
+			background: url(../../images/common/wg_start.html);
+	}
+	#contents ul.WGS_slideshow.WGS_restart::after {
+		background: url(../../images/common/wg_restart.png);
+	}	
+	/* ---------CSS for JS End--------- */
+	
+	/*---Illust---*/
+	#contents #WGS_sprite_connect_smart {
+		background-image: url("../../images/common/wg_connect_sp_ms.html");
+		width: 267px;
+		height: 108px;
+	}
+	#contents #WGS_sprite_connect_pc {
+		background-image: url("../../images/common/wg_connect_pc_ms.html");
+		width: 267px;
+		height: 108px;
+	}
+	
+	/*---Detail---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		max-width: 90%;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+		font-size: 1em;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step_note {
+		font-size: 0.9em;
+	}
+	
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 p.WGS_movie_button {
+		margin-top: 1.8em;
+	}
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a {
+		font-size: 1em;
+	}
+	
+	/*---Page button---*/
+	#contents ul.WGS_page_button {
+		font-size: 1em;
+		padding: 0 1.3em;
+	}
+	#contents ul.WGS_page_button span.WGS_button_title {
+		text-align: center;
+		min-width: 3.5em;
+	}
+	
+	/*---Modal tips---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list a.WGS_connect_link_icon:before {
+		content: url("../../images/common/wg_hint.html");
+	}
+	
+	/*---Page nation---*/
+	#contents div.WGS_contents ul.WGS_pagination {
+		bottom: 8px;
+	}
+	/*---Select os---*/
+	#contents ul.WGS_select_os {
+		/* padding-left: 1.3em; */
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 600px) {
+	#contents div.WGS_contents_step1 {
+		height: 530px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		height: 490px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		padding: 0.5em 50px 1em 50px;
+	}
+	/*---Slide anime---*/
+	#contents  div.WGS_progress_button {
+		width: 6%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 81%;
+	}
+	#contents div.WGS_count_area {
+		width: 10%;
+	}
+	
+	/*---Next/Back button---*/
+	#contents div.WGS_contents div.WGS_next_button {
+		margin-top: -30px;
+	}
+	#contents div.WGS_contents div.WGS_back_button {
+		margin-top: -30px;	
+	}
+	#contents div.WGS_contents div.WGS_next_button img {
+		width: 40px;
+		height: 60px;
+	}
+	#contents div.WGS_contents div.WGS_back_button img {
+		width: 40px;
+		height: 60px;
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 700px) {
+	/*===Header===*/
+	#header div.logo_wrap {
+		display: table-cell;
+	}
+	#header div.logo_wrap div.logo img {
+		vertical-align: middle;
+		width: 120px;
+	}
+	#header p.WGS_header_title {
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 1.2em;
+		color: #666666;
+	}
+	
+	/*---Step Bar---*/
+	#header div.WGS_step_bar {
+		/* margin-right: -1em; */
+	}
+	#header div.WGS_lang_others {
+		/* margin-right: -0.3em; */
+	}
+	#header ul.WGS_steps {
+		margin-top: 0.5em;
+	}
+	#header ul.WGS_steps li {
+		font-size: 0.9em;
+		width: 6.5em;
+	}
+	#header ul.WGS_steps li span.WGS_steps_contents {
+		padding: 0 0.5em;
+	}
+	
+	/* If 3 is not displayed */
+	#header ul.WGS_steps li.WGS_use {
+		display: table-cell; /* For Win and Mac */
+	}
+	#header ul.WGS_use_none li:last-child {
+		display: table-cell;
+	}
+	#header ul.WGS_use_none li:nth-child(2) span {
+		/* margin-right: 0; */
+	}
+	#header ul.WGS_use_none li:last-child span {
+		/* margin-right: 50%; */
+	}
+	
+	/* For Loc */
+	#header div.WGS_lang_others ul.WGS_steps li {
+		width: 3em;
+	}
+	#header div.WGS_lang_others ul.WGS_steps li.WGS_use {
+		display: none;
+	}
+	#header div.WGS_lang_others ul.WGS_underline.WGS_use_none li:nth-child(2) span {
+	    /* margin-right: 50%; */
+	}
+	
+	#header ul.WGS_underline {
+		margin-top: 0;
+	}
+	#header ul.WGS_steps span.WGS_steps_step {
+		display: inline;
+	}
+	
+	/*===Contents===*/
+	#contents h1.WGS_h1 {
+		/* margin-left: 50px; */
+	}
+	#contents h1.WGS_err_h1 {
+		margin-bottom: 0.5em;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#contents div.WGS_contents {
+		height: 480px;
+	}
+	#contents div.WGS_a_contents_nble div.WGS_contents {
+		height: 600px;
+	}
+	#contents div.WGS_i_contents_nble div.WGS_contents {
+		height: 700px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		margin-top: 0;
+		height: 430px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		padding: 0 50px;
+	}
+	#contents div.WGS_contents_step2 {
+		display: table;
+	}
+	#contents div.WGS_contents ul.WGS_step2 {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 1em;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_setup li.WGS_setup_step {
+		position: relative;
+	}
+	#contents div.WGS_contents div.WGS_wrap {
+		display: table;
+		width: 100%;
+	}
+	#contents div.WGS_contents div.WGS_step_contents div.WGS_figure {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+	}
+	#contents div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		display: table-cell;
+		vertical-align: middle;
+		/* width: 50%; */
+		height: 320px;
+	}
+	#contents div.WGS_a_contents_nble div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		height: 500px;
+	}
+	#contents div.WGS_i_contents_nble div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		height: 620px;
+	}
+	#contents div.WGS_mac_contents div.WGS_step_contents div.WGS_illust { 
+		height: 350px; /* Mac */
+	}
+	#contents div.WGS_illust div {
+		margin-bottom: 0;	
+	}
+	
+	/*---Slide anime---*/
+	#contents div.WGS_progress_button {
+		width: 6%;
+		/* margin-left: 1%; */
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 76%;
+	}
+	#contents div.WGS_count_area {
+		width: 13%;
+		/* margin-right: 1%; */
+	}
+	/*--- Illust --*/
+	#contents #WGS_sprite_connect_smart {
+		background-image: url("../../images/common/wg_connect_sp_ml.html");
+		width: 267px;
+		height: 164px;
+	}
+	#contents #WGS_sprite_connect_pc {
+		background-image: url("../../images/common/wg_connect_pc_ml.html");
+		width: 267px;
+		height: 164px;
+	}
+	/*---Detail---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		/* left: 55%; */
+		display: table-cell;
+		/* padding-left: 3%; */
+		width: 42%;
+		max-width: initial;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 div.WGS_detail {
+		/* left: 58%; */
+		display: table-cell;
+		/* padding-left: 3%; */
+		max-width: initial;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 div.WGS_chrome {
+		vertical-align: middle;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+		font-size: 1.1em;
+	}
+	
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_link_area {
+		position: absolute;
+		bottom: 0;
+		/* margin-right: 50px; */
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 p.WGS_movie_button {
+		margin-bottom: 0;
+	}
+	
+	/*---Connect Link---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step_link_list {
+		position: absolute;
+		bottom: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		/* margin-right: 25px; */
+	}
+	
+	/*---Modal Window---*/
+	/* modal error */
+	#contents div.WGS_modal_main ul {
+		padding: 0 0 0.5em 0;
+	}
+	/*---Err page---*/
+	#contents div.WGS_err_contents {
+		padding: 1.5em 2em;
+	}
+	#contents div.WGS_err_contents div.WGS_sub_err_contents p,
+	#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list {
+		/* margin-left: 1em; */
+		margin-bottom: 0.8em;
+	}
+	#contents div.WGS_err_contents div.WGS_sub_err_contents ol.WGS_step_list p {
+		/* margin-left: 0; */
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 800px) {
+	#contents div.WGS_contents {
+		height: 460px;
+	}
+	/*---Slide anime---*/
+	#contents  div.WGS_progress_button {
+		width: 5%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 79%;
+	}
+	#contents div.WGS_count_area {
+		width: 11%;
+	}
+	/*--- Illust --*/
+	#contents #WGS_sprite_connect_pc {
+		background-image: url("../../images/common/wg_connect_pc_l.html");
+		width: 365px;
+		height: 224px;
+	}
+	#contents #WGS_sprite_connect_smart {
+		background-image: url("../../images/common/wg_connect_sp_l.html"); 
+		width: 365px;
+		height: 225px;
+	}
+	/*---Modal Window---*/
+	/* common */
+	#contents div.WGS_modal_main {
+		width: 600px;
+	}
+}
+/**********************************************************************************/
+@media screen and (min-width: 1024px) {
+
+	/*---Step Bar---*/
+	#header ul.WGS_steps li {
+		width: 7.5em;
+	}
+	
+	#contents div.WGS_contents {
+		height: 450px;
+	}
+	#contents div.WGS_a_contents_nble div.WGS_contents {
+		height: 550px;
+	}
+	#contents div.WGS_i_contents_nble div.WGS_contents {
+		height: 650px;
+	}
+	#contents h1.WGS_err_h1 {
+		margin-left: 28px;
+		margin-right: 28px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		height: 390px;
+		padding: 2.5em 0 0 0;	
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		/* left: 0; */
+		top: auto;
+		transform: none;
+		-webkit-transform: none;
+	}
+	#contents div.WGS_contents ul.WGS_step1 div.WGS_wrap {
+		width: 924px;
+		margin: 0 auto;
+	}
+	#contents div.WGS_contents ul.WGS_step2 div.WGS_wrap {
+		width: 950px;
+		margin: 0 auto;
+	}
+	#contents div.WGS_contents div.WGS_step_contents div.WGS_figure {
+		width: 62%;
+	}
+	#contents div.WGS_a_contents_nble div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		height: 450px;
+	}
+	#contents div.WGS_i_contents_nble div.WGS_contents div.WGS_step_contents div.WGS_illust {
+		height: 550px;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		/* left: 62%; */
+		width: 35%;
+	}
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step2 div.WGS_detail {
+		/* left: 50%; */
+	}
+	#contents ul.WGS_slideshow {
+		width: 570px;
+	}
+	#contents div.WGS_progress_wrap {
+		width: 570px;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_button {
+		width: 20px;
+		/* margin: 0 5px 0 8px; */
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 470px;
+	}
+	#contents div.WGS_progress_wrap div.WGS_count_area {
+		width: 40px;
+		/* margin: 0 8px 0 5px; */
+	}
+}
+/**********************************************************************************/
+@media print {
+	body #container {
+	 	overflow-x: visible; /* For print */
+	 }
+	/*===Header===*/
+	/*---Step Bar---*/
+	#header ul.WGS_steps li {
+		width: 2.5em;
+		font-size: 1.2em;
+	}
+	#header ul.WGS_underline {
+		margin-top: 1px; /* For print */
+	}
+	/*===contents===*/
+	/*---Step title---*/
+	#contents h1.WGS_h1,
+	#contents h1.WGS_err_h1 {
+		font-size: 1.8em;
+	}
+	#contents h1.WGS_h1 span.WGS_step_num {
+		font-size: 1.8em;
+	}
+	
+	#contents div.WGS_contents_step1 {
+		height: 405px;
+	}
+	#contents div.WGS_step_contents {
+		height: 100%;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		height: auto;
+		margin-top: 0.5em;
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		padding: 0.5em 30px 1em 30px;
+	}
+	#contents div.WGS_contents ul.WGS_step2 {
+		padding: 1em 2em 1em 2em;
+	}
+
+	/*---Slide anime---*/
+	#contents div.WGS_contents ul.WGS_setup div.WGS_figure {
+		max-width: 85%;
+		width: auto;
+	}
+	#contents div.WGS_progress_button {
+		width: 8%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 74%;
+	}
+	#contents div.WGS_count_area {
+		width: 14%;
+	}
+
+	/*---Detail---*/
+	#contents div.WGS_contents_step1 div.WGS_detail {
+		max-width: 85%;
+		width: auto;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+		font-size: 1.2em;
+	}
+
+	/*---Other devices---*/
+	#contents div.WGS_contents div.WGS_step_contents a.WGS_modal-open-tips {
+		font-size: 0.85em;
+	}
+
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button {
+		margin-top: 0.8em;
+	}
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a {
+		font-size: 1.1em;
+		padding: 0.3em 1em;
+	}
+	
+	/*---Page button---*/
+	#contents ul.WGS_page_button {
+		margin-top: 1em;
+	}
+	#contents div.WGS_contents div.WGS_next_button img {
+		display: none;
+	}
+	#contents div.WGS_contents div.WGS_back_button img {
+		display: none;
+	}
+	#contents div.WGS_contents ul.WGS_pagination {
+		display: none !important;
+	}
+/************480px************/
+	/*===Header===*/
+	#header {
+		padding: 0.3em 0.5em 0.3em 0.5em;
+	}
+	#header ul.WGS_steps li {
+		font-size: 1.1em;
+	}
+	/*---Step title---*/
+	#contents h1.WGS_h1 span.WGS_step_num {
+		font-size: 2.5em;
+	}
+	#contents div.WGS_contents_step1 {
+		height: 490px;
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		margin-top: 1em;
+	}
+	#contents div.WGS_contents ul.WGS_step2 {
+		padding: 2em;
+	}
+	
+	/*---Slide anime---*/
+	#contents div.WGS_contents ul.WGS_setup div.WGS_figure {
+		max-width: 90%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 76%;
+	}
+	#contents div.WGS_count_area {
+		width: 13%;
+	}
+	
+	/* ---------CSS for JS--------- */
+	/* Slide anime */
+	#contents ul.WGS_slideshow::after {
+		width: 70px;
+		height: 70px;
+		margin-top: -35px;
+		/* margin-left: -35px; */
+	}
+	#contents ul.WGS_slideshow.WGS_start::after {
+			background: url(../../images/common/wg_start.html);
+	}
+	#contents ul.WGS_slideshow.WGS_restart::after {
+		background: url(../../images/common/wg_restart.png);
+	}		
+	/* ---------CSS for JS End--------- */
+	
+	/*---Detail---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 div.WGS_detail {
+		max-width: 90%;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step {
+		font-size: 1em;
+	}
+	#contents li.WGS_setup_step div.WGS_detail p.WGS_step_note {
+		font-size: 0.9em;
+	}
+	
+	/*---Movie button---*/
+	#contents div.WGS_contents div.WGS_step_contents ul.WGS_step1 p.WGS_movie_button {
+		margin-top: 1.8em;
+	}
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_movie_button a {
+		font-size: 1em;
+	}
+	
+	/*---Page button---*/
+	#contents ul.WGS_page_button {
+		font-size: 1em;
+		padding: 0 1.3em;
+	}
+	#contents ul.WGS_page_button span.WGS_button_title {
+		text-align: center;
+		min-width: 3.5em;
+	}
+
+	/*---Modal tips---*/
+	#contents div.WGS_contents div.WGS_step_contents p.WGS_step a.WGS_connect_link_icon:before {
+		content: url("../../images/common/wg_hint.html");
+	}
+	#WGS_modal_tips {
+		text-align: center;
+	}
+	
+	/*---Page nation---*/
+	#contents div.WGS_contents ul.WGS_pagination {
+		bottom: 8px;
+	}
+	/*---Select os---*/
+	#contents .WGS_select_os {
+		/* padding-left: 1.3em; */
+	}
+/************600px************/
+	#contents div.WGS_contents_step1 {
+		height: auto; /* For print */
+	}
+	#contents div.WGS_contents ul.WGS_step1 {
+		width: auto !important; /* For print */
+		position: static; /* For print */
+	}
+	#contents div.WGS_contents ul.WGS_step1 li.WGS_setup_step {
+		padding: 0.5em 50px 1em 50px;
+		width: 570px !important; /* For print */
+		float: none;
+		display: list-item;
+	}
+	/*--- Illust --*//* For print */
+	#contents div.WGS_illust {
+		padding-bottom: 1.5em;
+	}
+	#contents div.WGS_illust_smart:after {
+		content: url("../../images/common/wg_connect_sp_ms_p.html");
+		position: relative;
+		/* left: 30%; */
+	}
+	#contents div.WGS_illust_pc:after {
+		content: url("../../images/common/wg_connect_pc_ms_p.html");
+		position: relative;
+		/* left: 30%; */
+	}
+	#contents #WGS_sprite_connect_smart {
+		display: none;
+	}
+	#contents #WGS_sprite_connect_pc {
+		display: none;
+	}
+	/*---Slide anime---*/
+	#contents  div.WGS_progress_button {
+		width: 6%;
+	}
+	#contents div.WGS_progress_wrap div.WGS_progress_area {
+		width: 81%;
+	}
+	#contents div.WGS_count_area {
+		width: 10%;
+	}
+	
+	/*---Next/Back button---*/
+	#contents div.WGS_contents div.WGS_next_button {
+		margin-top: -30px;
+	}
+	#contents div.WGS_contents div.WGS_back_button {
+		margin-top: -30px;	
+	}
+	#contents div.WGS_contents div.WGS_next_button img {
+		width: 40px;
+		height: 60px;
+	}
+	#contents div.WGS_contents div.WGS_back_button img {
+		width: 40px;
+		height: 60px;
+	}
+	/*---Modal Window---*/
+	/* For Print */
+	#contents div.WGS_modal_main {
+		width: 450px;
+		position: absolute;
+		top: 300px !important;
+		/* left: 0; */
+	}
+}

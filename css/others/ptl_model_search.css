@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+#contents div.search_box {
+/*	margin-left: 5%;	18a-01 */
+}
+#txtKeywd {
+	padding: 0 0 0 0.5em;
+}
+.ui-menu .ui-menu-item a {
+	padding-left: 1em;
+}
+
+#contents div.search_box p.check_model img {
+	padding-right: 0.1em;
+}
+#check_model_window_main div.close_button {
+	text-align: right;
+}
+#contents #check_model_window_main div.lead p {
+	text-align: left;
+}
+#check_model_window_bg {
+	left: 0;
+}
+
+/* --- Carousel panel  --- */
+/*swiper*/
+#contents ul.swiper-wrapper{
+	padding-left: 0;
+	left: 0;
+}
+#contents li.swiper-slide {
+	float: left;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#contents li.swiper-slide-active {
+	border-left: none;
+}
+#contents ul.swiper-wrapper li.new a:before {
+	content: url('../../images/others/new_s.html');
+	left: 0;
+}
+#contents div.swiper-button-prev {
+	background-image: url(../../images/others/arrow_left.png);
+	left: -34px;
+	right: auto;
+}
+#contents div.swiper-button-next {
+	background-image: url(../../images/others/arrow_right.png);
+	right: -34px;
+}
+
+/* --- Modal Window --*/
+/* model list window */
+#model_name_window_main div.close_button {
+	text-align: right;
+}
+#model_name_window_main ul {
+	padding: 1em 1em 1em 2.5em;
+}
+#model_name_window_bg {
+	left:0;
+}
+
+/* --- Model list (Search by Categories) --- */
+/* common style */
+#contents h2 {
+	text-align: left;
+}
+#contents h2 span.selected_item {
+	float: right; 
+}
+#contents div.search_category div {	
+	border-right: 2px solid #db4d4d;
+	border-left: 2px solid #db4d4d;
+}
+#contents div.search_category div p {
+	padding-left: 1em; 
+	text-align: left;
+}
+#contents div.search_category div ul {
+	padding-left: 0.5em;
+}
+#contents div.search_category div ul li {
+	float: left;
+	margin: 0 3em 1.5em 1em;
+	text-align: left;
+}
+#contents div.search_category div ul li.select_line {
+	margin: 0 0 1.5em 1em;
+}
+/* next button */
+#contents div.search_category div.next_button {
+	border-right: 0;
+	border-left: 0;
+}
+#contents div.search_category div.next_button p {
+	padding-left: 0;
+}
+#contents div.search_category div.next_button p a {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #eeeeee), color-stop(95%, #cccccc), to(#cccccc)); /* Android2.3, Safari5.1 */
+}
+#contents div.search_category div.next_button p span.next_button_img {
+	padding-left: 0.5em;
+}
+
+/* ================================================================================================= */
+@media screen and (min-width: 375px) {
+/* --- Search box ---*/
+	#contents div.search_box {
+/*		margin-left: 8%;	18a-01 */
+	}
+/* --- Carousel panel  --- */
+	#contents div.swiper-button-prev {
+		left: -36px;
+	}
+	#contents div.swiper-button-next {
+		right: -36px;
+	}
+}
+/* ================================================================================================= */
+@media screen and (min-width: 480px) {
+/*====== Contents ======*/
+/* --- Search Box --- */
+	#contents div.search_box {
+/*		margin-left: 20%;	18a-01 */
+	}
+/* --- Carousel panel  --- */
+	#contents div.swiper-button-prev {
+		left: -32px;
+	}
+	#contents div.swiper-button-next {
+		right: -32px;
+	}
+/* --- Modal Window --*/
+	#model_name_window_main ul {
+		padding: 1em 1em 1em 2.5em;
+	}
+/* --- Model list (Search by Categories) --- */
+	#contents div.list_section {
+		margin: 0 3% 2em 4%;
+	}
+	#contents div.search_category h2 {
+		border-right: solid 1px #db4d4d;
+		border-left: solid 1px #db4d4d;
+	}
+/* Display (red) */
+	#contents div.search_category h2.display span.term {
+		float: left;
+		padding-left: 8%;
+	}
+	#contents div.search_category h2.display:after {
+		float: right;
+		background: url(../../images/others/arrow_white.png) no-repeat right center;
+	}
+/* Selected (white) */
+	#contents div.search_category h2.selected {
+		border-right: solid 1px #989898;
+		border-left: solid 1px #989898
+	}
+/* Hide (gray) */
+	#contents div.search_category h2.hide {
+		border-right: solid 1px #989898;
+		border-left: solid 1px #db4d4d;
+	}
+/* category */
+	#contents div.search_category h2.category {
+		left: 0;
+	}
+/* model */
+	#contents div.search_category h2.model {
+		left: 49%;
+	}
+	#contents div.search_category div ul.model_list li {
+		margin: 0 1.5em 0.8em 1em;
+	}
+	#contents div.search_category div ul.model_list li.select_line {
+		margin: 0.6em 0 1.8em 1em;
+	}
+	#contents div.search_category h2.model span.term {
+		padding-left: 0;
+	}
+}
+/* ================================================================================================= */
+@media screen and (min-width: 600px) {
+/* --- Carousel panel  --- */
+	#contents div.swiper-button-prev {
+		left: -40px;
+	}
+	#contents div.swiper-button-next {
+		right: -40px;
+	}
+}
+/* ================================================================================================= */
+@media screen and (min-width: 750px) {
+	#contents div.search_box {
+/*		margin-left: 23%;	18a-01 */
+	}
+/* --- Modal Window --*/
+	/* model list window */
+	#model_name_window_main ul {
+		padding: 1em 1em 1em 6em;
+	}
+}
+/* ================================================================================================= */
+@media screen and (min-width: 800px) {
+/* --- Search Box --- */
+	#contents div.search_box {
+/*		margin-left: 28%;	18a-01 */
+	}
+	#contents ul.swiper-wrapper li.new a:before  {
+		content: url('../../images/others/new.gif');
+	}
+}
+
+/* ================================================================================================= */
+@media screen and (min-width: 1024px) {
+}
+
+/* =========================Print========================= */
+@media print {
+/* --- Search box ---*/
+	#contents div.search_box {
+/*		margin-left: 8%;	18a-01 */
+	}
+/* --- Carousel panel  --- */
+	#contents div.swiper-button-prev {
+		left: -36px;
+	}
+	#contents div.swiper-button-next {
+		right: -36px;
+	}
+	
+/* ==@media screen and (min-width: 480px) ==*/
+/* --- Search Box --- */
+	#contents div.search_box {
+/*		margin-left: 20%;	18a-01 */
+	}
+	#contents div.swiper-button-prev {
+		left: -32px;
+	}
+	#contents div.swiper-button-next {
+		right: -32px;
+	}
+/* --- Modal Window --*/
+	#model_name_window_main ul {
+		padding: 1em 1em 1em 2.5em;
+	}
+/* --- Model list (Search by Categories) --- */
+/* common style */
+	#contents div.search_category h2 {
+		border-right: solid 1px #db4d4d;
+		border-left: solid 1px #db4d4d;
+	}
+/* Display (red) */
+	#contents div.search_category h2.display span.term {
+		float: left;
+		padding-left: 8%;
+	}
+	#contents div.search_category h2.display:after {
+		float: right;
+		background: url(../../images/others/arrow_white.png) no-repeat right center;
+	}
+/* Selected (white) */
+	#contents div.search_category h2.selected {
+		border-right: solid 1px #989898;
+		border-left: solid 1px #989898;
+	}
+/* Hide (gray) */
+	#contents div.search_category h2.hide {
+		border-right: solid 1px #989898;
+		border-left: solid 1px #db4d4d;
+	}
+/* category */
+	#contents div.search_category h2.category {
+		left: 0;
+	}
+/* model */
+	#contents div.search_category h2.model {
+		left: 49%;
+	}
+	#contents div.search_category div ul.model_list li {
+		margin: 0 1.5em 0.8em 1em;
+	}
+	#contents div.search_category h2.model span.term {
+		padding-left: 0;
+	}
+
+/* ==@media screen and (min-width: 600px) ==*/
+/* --- Carousel panel  --- */
+	#contents div.swiper-button-prev {
+		left: -40px;
+	}
+	#contents div.swiper-button-next {
+		right: -40px;
+	}
+}

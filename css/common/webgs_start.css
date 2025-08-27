@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* header */
+#header div.logo_wrap div.logo img {
+	width: 84px;
+}
+
+/* contents */
+#contents {
+	padding-bottom: 1.5em;
+}
+#contents h1.WGS_h1  {
+	font-size: 1.9em;
+	font-weight: normal;
+	line-height: 1.5em;
+}
+#contents h1.WGS_h1 span.WGS_title_model {
+	display: block;
+}
+#contents h1.WGS_h1 span.WGS_title_os {
+	font-size: 0.7em;
+}
+#contents div.WGS_start {
+	margin-bottom: 3.5em;
+}
+#contents div.WGS_start_img {
+	text-align: center;
+	padding: 1em 0;
+}
+#contents div.WGS_start_img img {
+	max-width: 80%;	
+}
+#contents p.WGS_start_button {
+	text-align: center;
+	opacity: 0;
+}
+#contents p.WGS_start_button a {
+	display: inline-block;
+	font-size: 1.4em;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.8em 1em;
+	min-width: 6em;
+	background-color: #696969;
+}
+#contents p.WGS_start_button a:hover {
+	background-color: #949494;
+}
+#contents p.WGS_start_button span.WGS_button_txt {
+	vertical-align: middle;
+}
+#contents p.WGS_start_button span img {
+	/* padding-left: 0.8em; */
+	vertical-align: middle;
+}
+#contents p.WGS_link {
+	font-size: 0.9em;
+}
+#contents p.WGS_start_note {
+	margin-top: 1em;
+	font-size: 0.7em;
+}
+#footer p.copyright {
+    font-size: 0.9em;
+    color: #cccccc;
+    text-align: center;
+    direction: ltr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width: 375px) {
+	#contents div.WGS_start_img img {
+		max-width: 90%;	
+	}
+	#contents p.WGS_start_note {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	#header div.logo_wrap div.logo img {
+		width:120px;
+	}
+	#contents h1.WGS_h1 span.WGS_title_model {
+		display: inline;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		font-size: 0.8em;
+		/* margin-left: 0.5em; */
+	}
+	#contents div.WGS_start_img img {
+		max-width: 100%;
+	}
+	#contents p.WGS_start_note {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#contents h1.WGS_h1 {
+		font-size: 2.2em;
+		margin-top: 0.8em;
+		/* margin-left: 5%; */
+		margin-bottom: 0;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		font-size: 0.8em;
+		/*  margin-left: 0.5em; */
+	}
+	#contents div.WGS_start {
+		display: table;
+		margin: 0 auto;
+		margin-bottom: 4em;
+	}
+	#contents div.WGS_printer_img {
+		display: table-cell;
+		width: 40%;
+	}
+	#contents p.WGS_start_button {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		/* padding-left: 1.5em; */
+	}
+	#contents p.WGS_start_button a {
+		font-size: 1.6em;
+	}
+	#contents p.WGS_link {
+		font-size: 1em;
+		/* margin-left: 5%; */
+	}
+	#contents p.WGS_start_note {
+		margin: 1em 5% 0 5%;
+	}
+}
+/**********************************************************************************/
+@media print {
+	#header div.logo_wrap div.logo img {
+		width:120px;
+	}
+	#contents h1.WGS_h1 span.WGS_title_model {
+		display: inline;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		font-size: 0.8em;
+		/* margin-left: 0.5em; */
+	}
+	#contents div.WGS_start_img img {
+		max-width: 100%;
+	}
+	#contents h1.WGS_h1 {
+		font-size: 2.2em;
+		margin-top: 0.8em;
+		/* margin-left: 5%; */
+		margin-bottom: 0;
+	}
+	#contents h1.WGS_h1 span.WGS_title_os {
+		font-size: 0.8em;
+		/* margin-left: 0.5em; */
+	}
+	#contents div.WGS_start {
+		display: table;
+		margin: 0 auto;
+		margin-bottom: 4em;
+	}
+	#contents p.WGS_start_button {
+		opacity: 1 !important;  /* For print */
+	}
+	#contents div.WGS_printer_img {
+		display: table-cell;
+		width: 40%;
+	}
+	#contents p.WGS_start_button {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		/* padding-left: 1em; */ /* For print */
+	}
+	#contents p.WGS_start_button a {
+		font-size: 1.6em;
+	}
+	#contents p.WGS_link {
+		font-size: 1em;
+		/* margin-left: 5%; */
+	}
+	#contents p.WGS_start_note {
+		font-size: 0.9em;
+		margin: 1em 5% 0 5%;
+	}
+}
